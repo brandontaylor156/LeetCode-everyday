@@ -3,5 +3,12 @@
 # Date   : 2022-07-03
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        pass
+    def twoSum(self, nums, target):
+        newList = []
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if i is not j and nums[i]+nums[j] is target:
+                    newList.append(i)
+                    newList.append(j)
+                    return newList
+
