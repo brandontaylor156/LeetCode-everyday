@@ -1,4 +1,4 @@
-s = "abcdefgggabcdefghijklmnop"
+s = "abcdeagblkmk"
 
 charSet = set()
 left = 0
@@ -11,3 +11,6 @@ for right in range(len(s)):
     charSet.add(s[right])
     res = max(res, right-left+1)
 print(res)
+
+
+
