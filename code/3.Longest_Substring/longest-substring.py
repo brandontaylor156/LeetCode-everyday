@@ -1,16 +1,13 @@
 s = "abcdefgggabcdefghijklmnop"
 
-startIndex = 0
-substringLength = 1
-max = 1
+charSet = set()
+left = 0
+res = 0
 
-for character in range(1, len(s)):
-    substringLength += 1
-    for i in range(startIndex, character+1):
-        if (s[i] == s[character] and i != character):
-            if substringLength > max:
-                max = substringLength
-            substringLength = 1
-            startIndex += 1
-
-print(max)
+for right in range(len(s)):
+    while s[right] in charSet:
+        charSet.remove(s[left])
+        left += 1
+    charSet.add(s[right])
+    res = max(res, right-left+1)
+print(res)
