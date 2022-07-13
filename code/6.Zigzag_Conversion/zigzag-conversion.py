@@ -1,4 +1,5 @@
 def convert(s, numRows):
+    # starting row index
     line = 0
     # direction 1 goes down, direction -1 goes up at zig zag angle
     lineDirection = 1
